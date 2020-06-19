@@ -1,0 +1,14 @@
+.item {
+  margin-bottom: 5px;
+}
+
+p {
+ margin: 0px;
+ display: inline-block;
+}
+
+button{
+  display: inline-block;
+  margin: 0px;
+  margin-left: 10px;
+}
