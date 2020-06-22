@@ -36,7 +36,7 @@ class App extends Component {
     }
 
     const contact = {
-      id: uuidv4 (),
+      id: uuidv4(),
       name,
       number,
     };
@@ -58,7 +58,7 @@ class App extends Component {
 
   render () {
     const {filter} = this.state;
-    const visibleContacts = this.getVisibleContacts ();
+    const visibleContacts = this.getVisibleContacts();
     const visibleFilter = visibleContacts.length > 1;
     const visibleList = visibleContacts.length > 0;
 

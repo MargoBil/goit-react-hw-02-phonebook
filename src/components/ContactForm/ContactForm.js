@@ -4,24 +4,23 @@ import InputMask from 'react-input-mask';
 
 import s from './ContactForm.module.css';
 
+const INITIAL_STATE = {
+  name: '',
+  number: '',
+}
+
 class ContactForm extends Component {
-  state = {
-    name: '',
-    number: '',
-  };
+  state = {...INITIAL_STATE};
 
   handleSubmit = e => {
-    e.preventDefault ();
-    this.props.onAddName (this.state);
-    this.setState ({
-      name: '',
-      number: '',
-    });
+    e.preventDefault();
+    this.props.onAddName(this.state);
+    this.setState({...INITIAL_STATE});
   };
 
   handleChange = e => {
     const {name, value} = e.target;
-    this.setState ({[name]: value});
+    this.setState({[name]: value});
   };
 
   render () {
